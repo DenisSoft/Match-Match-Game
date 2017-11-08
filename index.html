@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>Match-Match Game</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="js/MemoryGame.js" type="text/javascript"></script>
+    <script src="js/Stopwatch.js" type="text/javascript"></script>
+    <link href="css/style.css" type="text/css" rel="stylesheet" />
+  </head>
+  <body>
+    <section id="memory--settings-modal" class="valign-table modal show">
+      <div class="valign-cell">
+        <h2 class="title">Find two identical heroes!</h2>
+        <form>
+          <h2 class="memory--settings-label">Select cover for playing card:</h2>
+          <label class="cover"><img src="images/bg2.jpg" height="180" />
+            <input type="radio" name="select-cover" value="bg2" checked/></label>
+          <label class="cover"><img src="images/bg3.jpg" height="180"/>
+            <input type="radio" name="select-cover" value="bg3" /></label>
+          <label class="cover"><img src="images/bg1.jpg" height="180"/>
+            <input type="radio" name="select-cover" value="bg1" /></label>
+          <h2 class="memory--settings-label">Select a level:</h2>
+          <label class="cover"><img src="images/level12.jpg" height="150"  />
+            <input type="radio" name="select-label" value="3x4" checked/></label>
+          <label class="cover"><img src="images/level13.jpg" height="150"/>
+            <input type="radio" name="select-label" value="4x5" /></label>
+          <label class="cover"><img src="images/level14.jpg" height="150"/>
+            <input type="radio" name="select-label" value="5x6" /></label>
+          <input id="memory--settings-reset" type="submit" value="Start New Game" />
+        </form>
+      </div>
+    </section>
+    <section id="memory--end-game-modal" class="valign-table modal">
+      <div class="valign-cell">
+        <div class="wrapper">
+          <h2 id="memory--end-game-message"></h2>
+          <h3 id="memory--end-game-score"></h3>
+        </div>
+      </div>
+    </section>
+    <section id="memory--app-container">
+      <ul id="memory--cards"></ul>
+    </section>
+    <section class="memory--menu-bar">
+        <div class="item item-title">
+          <h1 class="memory--app-name">Find Hero</h1>
+        </div>
+        <div class="item item-timer" id="stopwatch">
+        </div>
+        <div class="item item-settings">
+          <a href="#settings">
+            <img id="memory--settings-icon" src="images/gear.png" />
+          </a>
+        </div>
+    </section>
+    <script src="js/BrowserInterface.js" type="text/javascript"></script>
+  </body>
+</html>
